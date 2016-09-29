@@ -1,0 +1,58 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;
+        text-align:center;
+      }
+      h1{
+        font-weight: 300;
+      }
+
+      .inputbox{
+        width:400px;
+      }
+      .inputbox span{
+        display:inline-block;
+        width:50px;
+      }
+      .inputbox input{
+        display:inline-block;
+        width:280px;
+      }
+      .inputbox button{
+        display:inline-block;
+        width:50px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>rfrshr</h1>
+    <h2>Press Alt+R</h2>
+    <span class="message"></span>
+    <hr>
+    <div class="inputbox">
+      <span>http://</span>
+      <input type="text" class="urlinput"></input>
+      <button class="urlbutton">Save</button>
+    </div>
+  </body>
+</html>
